@@ -1,0 +1,58 @@
+Prova Técnica
+
+ 
+
+1) Criar projeto Web Api em .Net C# (Framework 4.7 ou .net Core)
+
+ 
+
+2) Considerar o modelo abaixo:
+
+ 
+
+Cliente:
+
+    Codigo                 Numero
+
+    Nome                   Texto
+
+    CPF                    Texto
+
+    Telefone               Texto
+
+    Endereco               Objeto
+ 
+
+ClienteEndereco:
+
+    Codigo                 Numero
+
+    Logradouro             Texto
+
+    Numero                 Numero
+
+    Complemento            Texto
+
+    Uf                     Texto
+
+    Cidade                 Texto
+	
+
+
+3) Criar métodos correspondentes para o crud de Cliente, seguindo os conceitos RESTFull.
+
+ 
+
+4) Criar método para retornar o endereço do cliente por Codigo do Cliente e CPF,  seguindo os conceitos RESTFull.
+
+ 
+
+5) A implementação deverá seguir todos os conceitos de SOLID (Favor informar no código aonde foi utilizado e por que foi utilizado).
+
+ 
+
+6) Desejável que a arquitetura do projeto siga o padrão de modelagem de softwate DDD - Domain-Driven Design (Projeto Orientado a Domínio).
+
+ 
+
+7) Utilizar pelo menos dois Design Pattern. Ex: Repository, Singleton, Factory, Abstract Factory, Builder.
