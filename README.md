@@ -29,7 +29,9 @@ Cliente - Pessoa Física ou Júridica que possui conta no banco.
 ## Referências
 
 Domain Driven Design - O que você precisa saber - School Of Net
+
 https://www.youtube.com/watch?v=E-1rcCzAOi0
 
 O que é SOLID: O guia completo para você entender os 5 princípios da POO
+
 https://medium.com/joaorobertopb/o-que-%C3%A9-solid-o-guia-completo-para-voc%C3%AA-entender-os-5-princ%C3%ADpios-da-poo-2b937b3fc530
