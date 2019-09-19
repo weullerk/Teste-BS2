@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Domain.Models.Cliente
+namespace Domain.SeedWork
 {
-    public interface IPessoa
+    public interface IRepository<T> where T : IAggregateRoot
     {
     }
 }
