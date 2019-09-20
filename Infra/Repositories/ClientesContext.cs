@@ -1,4 +1,5 @@
 ﻿using Domain.Models.Cliente;
+using Infra.Repositories.ClientesRepository;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,11 @@ namespace Infra.Repositories
             Database.Migrate();
         }
 
-        DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new ClientesEntityTypeConfiguration());
+        }
     }
 }
