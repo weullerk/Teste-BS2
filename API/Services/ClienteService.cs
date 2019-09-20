@@ -15,6 +15,12 @@ namespace API.Services
         private IClienteRepository _clienteRepository;
         private IMapper _mapper;
 
+        public ClienteService(IClienteRepository clienteRespository, IMapper mapper)
+        {
+            _clienteRepository = clienteRespository;
+            _mapper = mapper;
+        }
+
         public ClienteWithEnderecoDTO SearchByCodigoAndCpf(int codigo, string cpf)
         {
             List<Cliente> cliente = _clienteRepository.SearchByCriteria(c => c.Codigo == codigo && c.Documento == cpf);
