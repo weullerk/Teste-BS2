@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Domain.SeedWork
 {
-    interface ICliente<T> where T : Cliente
+    public interface ICliente<T> where T : Cliente
     {
     }
 }

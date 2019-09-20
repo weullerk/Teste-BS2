@@ -31,10 +31,11 @@ using System.Text;
 // Interface esperifica para ser utilizada no dominio e passivel de extensão.
 //
 // Dependency Inversion Principle:
-// A dependencia da repositorio será injetada pelo framework
-
+// NA
     
-// TODO: criar as operações que serão feitas com base no contrato do repositório do cliente.
+// Como esse é um crud simples, a entidade do cliente possui somente os atributos,
+// mas poderia conter outros métodos que manipulavam o estado do dominio,
+// como solicitar um cartão para o cliente, fazer um emprestimo, etc..
 
 namespace Domain.Models.Cliente
 {

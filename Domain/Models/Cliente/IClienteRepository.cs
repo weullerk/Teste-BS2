@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Domain.Models.Cliente
 {
-    interface IClienteRepository : IRepository<Cliente>
+    public interface IClienteRepository : IRepository<Cliente>
     {
         IEnumerable<Cliente> SearchByCriteria(Expression<Func<Cliente, bool>> criteria);
     }
