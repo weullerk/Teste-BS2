@@ -52,9 +52,8 @@ namespace Domain.Models.Cliente
 
         public Endereco Endereco { get; private set; }
 
-        public Cliente(int codigo, string nome, string documento, string telefone, Endereco endereco)
+        public Cliente(string nome, string documento, string telefone, Endereco endereco)
         {
-            this.Codigo = codigo;
             this.Nome = nome;
             this.Documento = documento;
             this.Telefone = telefone;

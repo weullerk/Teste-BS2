@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Infra.Repositories.ClientesRepository
 {
-    class ClientesRepository : IClienteRepository
+    public class ClientesRepository : IClienteRepository
     {
 
         private readonly ClientesContext _context;
@@ -25,18 +25,20 @@ namespace Infra.Repositories.ClientesRepository
         public void Add(Cliente cliente)
         {
             _context.Clientes.Add(cliente);
-            _context.SaveChanges();
         }
 
         public void Remove(Cliente cliente)
         {
             _context.Clientes.Remove(cliente);
-            _context.SaveChanges();
         }
 
         public void Update(Cliente cliente)
         {
             _context.Clientes.Update(cliente);
+        }
+
+        public void Save()
+        {
             _context.SaveChanges();
         }
     }
