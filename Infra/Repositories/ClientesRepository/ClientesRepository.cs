@@ -17,9 +17,14 @@ namespace Infra.Repositories.ClientesRepository
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public IEnumerable<Cliente> SearchByCriteria(Func<Cliente, bool> criteria)
+        public List<Cliente> SearchByCriteria(Func<Cliente, bool> criteria)
         {
-            return _context.Set<Cliente>().AsEnumerable().Where(criteria);
+            return _context.Set<Cliente>().AsQueryable().Where(criteria).ToList();
+        }
+
+        public Cliente Find(int codigo)
+        {
+            return _context.Clientes.Find(codigo);
         }
 
         public void Add(Cliente cliente)

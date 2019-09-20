@@ -7,6 +7,6 @@ namespace Domain.Models.Cliente
 {
     public interface IClienteRepository : IRepository<Cliente>
     {
-        IEnumerable<Cliente> SearchByCriteria(Func<Cliente, bool> criteria);
+        List<Cliente> SearchByCriteria(Func<Cliente, bool> criteria);
     }
 }

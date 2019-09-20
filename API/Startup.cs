@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API.Helpers;
+using API.Services;
 using AutoMapper;
 using Domain.Models.Cliente;
 using Infra.Repositories;
@@ -35,6 +36,7 @@ namespace API
             services.AddDbContext<ClientesContext>(o => o.UseSqlServer(connectionString));
 
             services.AddScoped<IClienteRepository, ClientesRepository>();
+            services.AddScoped<IClienteService, ClienteService>();
 
             services.AddAutoMapper(typeof(Mapping));
 
