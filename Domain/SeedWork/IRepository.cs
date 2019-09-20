@@ -9,5 +9,6 @@ namespace Domain.SeedWork
         void Add(T entity);
         void Update(T entity);
         void Remove(T entity);
+        void Save();
     }
 }

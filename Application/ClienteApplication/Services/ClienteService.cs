@@ -1,4 +1,5 @@
-﻿using Domain.Models.Cliente;
+﻿using Application.ClienteApplication.DTOs;
+using Domain.Models.Cliente;
 using Infra.Repositories.ClientesRepository;
 using System;
 using System.Collections.Generic;
@@ -8,10 +9,9 @@ namespace Application.ClienteApplication.Services
 {
     public class ClienteService
     {
-
         private IClienteRepository clienteRepository;
 
-        public void CreateCliente(Cliente cliente)
+        public void CreateCliente(ClienteWithEnderecoDTO cliente)
         {
 
         }

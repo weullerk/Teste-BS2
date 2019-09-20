@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Helpers;
+using AutoMapper;
+using Domain.Models.Cliente;
 using Infra.Repositories;
+using Infra.Repositories.ClientesRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +33,10 @@ namespace API
         {
             var connectionString = Configuration["connectionStrings:BS2DBConnectionString"];
             services.AddDbContext<ClientesContext>(o => o.UseSqlServer(connectionString));
+
+            services.AddScoped<IClienteRepository, ClientesRepository>();
+
+            services.AddAutoMapper(typeof(Mapping));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
