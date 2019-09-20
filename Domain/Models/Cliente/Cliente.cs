@@ -42,7 +42,7 @@ namespace Domain.Models.Cliente
     public class Cliente : IAggregateRoot
 
     {
-        public int Codigo { get; private set; }
+        public readonly int Codigo { get; private set; }
 
         public virtual string Nome { get; private set; }
 

@@ -28,7 +28,7 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = Configuration["connectionStrings:BS2DBConnectionString"];
-            services.AddDbContext<ClienteContext>(o => o.UseSqlServer(connectionString));
+            services.AddDbContext<ClientesContext>(o => o.UseSqlServer(connectionString));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 

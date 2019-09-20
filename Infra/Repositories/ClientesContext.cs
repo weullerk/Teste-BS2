@@ -6,9 +6,9 @@ using System.Text;
 
 namespace Infra.Repositories
 {
-    public class ClienteContext : DbContext
+    public class ClientesContext : DbContext
     {
-        public ClienteContext(DbContextOptions<ClienteContext> options) : base(options)
+        public ClientesContext(DbContextOptions<ClientesContext> options) : base(options)
         {
             Database.Migrate();
         }

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace Infra.Repositories.ClienteRepository
+namespace Infra.Repositories.ClientesRepository
 {
-    class ClienteRepository : IClienteRepository
+    class ClientesRepository : IClienteRepository
     {
         public IEnumerable<Cliente> SearchByCriteria(Expression<Func<Cliente, bool>> criteria)
         {
